@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    .main-div1{
+      height: 640px;
+      width: 550px;
+      border: solid 2px black;
+      margin-left: 60px; 
+    }
+    .all-cell {
+
+      width: 490px;
+      color: black;
+      margin-left: 20px;
+      margin-top: 22px;
+      padding-left: 20px
+    }
+    .main-div2{
+      height: 640px;
+      width: 550px;
+      border: solid 2px black;
+      margin-left: 60px; 
+      margin-top: 20px; 
+    }
+    .div-in-div1 {
+      height: 109px;
+      width: 200px;
+      border: solid 2px black;
+      margin-left: 60px;
+      background-color: #800000; 
+      border-radius: 25px;
+    }
+    .div-in-div2 {
+      height: 109px;
+      width: 200px;
+      border: solid 2px black;
+      margin-left: 60px;
+      background-color: #ffffff; 
+      border-radius: 25px;
+    }
+    .div-in-div3 {
+      height: 109px;
+      width: 200px;
+      border: solid 2px black;
+      margin-left: 60px;
+      border-radius: 25px;
+      background-image: url(https://cdn.pixabay.com/photo/2019/09/10/10/26/sea-4465800_640.jpg);
+    }
+  .main-div3{
+    border: solid 2px black;
+    height: 520px;
+    width: 550px;
+    margin-top: 70px;
+
+  }
+  .div-in-div4{
+    height: 109px;
+    width: 200px;
+    border: solid 2px black;
+    margin-left: 60px;
+    border-radius: 15px 50px 30px 5px;
+    background-color: #800000;
+  }
+  .div-in-div5{
+    height: 109px;
+    width: 200px;
+    border: solid 2px black;
+    margin-left: 60px;
+    border-radius: 15px 50px 30px;
+    background-color: #800000;
+  }
+  .div-in-div6{
+    height: 109px;
+    width: 200px;
+    border: solid 2px black;
+    margin-left: 60px;
+    border-radius: 15px 50px;
+    background-color: #800000;
+  }
+
+  .main-div4{
+    border: solid 2px black;
+    height: 520px;
+    width: 550px;
+    margin-top: 30px;
+
+  }
+
+  .div-in-div7{
+    height: 109px;
+    width: 200px;
+    border: solid 2px black;
+    margin-left: 60px;
+    border-radius: 50px/15px;
+    background-color: #800000;
+  }
+  .div-in-div8{
+    height: 109px;
+    width: 200px;
+    border: solid 2px black;
+    margin-left: 60px;
+    border-radius: 15px/50px;
+    background-color: #800000;
+  }
+  .div-in-div9{
+    height: 109px;
+    width: 200px;
+    border: solid 2px black;
+    margin-left: 60px;
+    border-radius: 50%;
+    background-color: #800000;
+  }
+  </style>
+</head>
+<body>
+  <div class="main-div1">
+    <h2 style="padding-left: 20px;">border-style თვისება</h2>
+    <p style="padding-left: 20px;">მოცემული თვისება განსაზღვრავს, როგორ აისახება ჩარჩოს გვერდები:</p>
+    <div class="all-cell" style="border: dotted 2px ;">
+      dotted - წერტილოვანი ჩარჩო.
+    </div>
+    <div class="all-cell" style="border: dashed 2px ;"
+    >dashed - წყვეტილი ჩარჩო.
+  </div>
+    <div class="all-cell" style="border: solid 2px ;">
+      solid - უწყვეტი ჩარჩო.
+    </div>
+    <div class="all-cell" style="border: double 2px ;">
+      double - ორმაგი ჩარჩო.
+    </div>
+    <div class="all-cell" style="border: groove 2px ;">
+      groove - ჩაღრმავებული ჩარჩო.
+    </div>
+    <div class="all-cell" style="border: ridge 2px ;">
+      ridge - ამობურცული ჩარჩო.
+    </div>
+    <div class="all-cell" style="border: unset 2px ;">
+      unset - ჩარჩოში ჩაღრმავებული.
+    </div>
+    <div class="all-cell" style="border: outset 2px ;">
+      outset - ჩარჩოში ამობურცული.
+    </div>
+    <div class="all-cell" style="border: none 2px ;">
+      none - ჩარჩო არ არის.
+    </div>
+    <div class="all-cell" style="border: hidden 2px ;">
+      hidden - დამალული ჩარჩო.
+    </div>
+    <div class="all-cell" style="border: mix 2px ;">
+      mix - ჩარჩო შერეული საზღვრებით.
+    </div>
+  </div>
+
+
+  <div class="main-div2">
+    <pre>
+    border-radius თვისება საშუალებას გაძლევთ ელემენტს მომრგვალებული
+    კუთხეები დაამატოთ.
+    
+    მომრგვალებული კუთხეების მქონე ელემენტისთვის:
+    </pre>
+    <div class="div-in-div1" style="padding-left: 5px; padding-top: 12px;">
+      მართკუთხედი მომრგვალებული კუთხეებით
+    </div>
+    <pre>
+    მომრგვალებული კუთხეები ჩარჩოიანი ელემენტისათვის:
+    </pre>
+    <div class="div-in-div2" style="padding-left: 5px; padding-top: 12px;">
+      მართკუთხედი მომრგვალებული კუთხეებით
+    </div>
+    <pre>
+      მომრგვალებული კუთხეები ფონურგამოსახულებიანი ელემენტისათვის:
+      </pre>
+    <div class="div-in-div3" style="padding-left: 5px; padding-top: 12px; font-weight: bold;">
+      მართკუთხედი მომრგვალებული კუთხეებით
+    </div>
+
+    <div class="main-div3">
+      <pre style="padding-left: 32px; padding-top: 12px;">ოთხი მნიშვნელობა - border-radius: 15px 50px 30px 5px</pre>
+      <div class="div-in-div4"></div>
+
+      <pre style="padding-left: 32px; padding-top: 12px;">სამი მნიშვნელობა - border-radius: 15px 50px 30px</pre>
+      <div class="div-in-div5"></div>
+
+      <pre style="padding-left: 32px; padding-top: 12px;">ორი მნიშვნელობა - border-radius: 15px 50px</pre>
+      <div class="div-in-div6"></div>
+    </div>
+
+
+
+    <div class="main-div4">
+      <pre style="padding-left: 32px; padding-top: 12px;">ელისფური კუთხე - border-radius: 50px/15px</pre>
+      <div class="div-in-div7"></div>
+
+      <pre style="padding-left: 32px; padding-top: 12px;">ელისფური კუთხე - border-radius: 15px/50px</pre>
+      <div class="div-in-div8"></div>
+
+      <pre style="padding-left: 32px; padding-top: 12px;">ელისფური კუთხე - border-radius: 50%</pre>
+      <div class="div-in-div9"></div>
+    </div>
+</body>
+</html>
+
+
+

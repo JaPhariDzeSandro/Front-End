@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    .container {
+      width: 770px;
+      height: 580px;
+      background-color: #ffffff;
+      border: solid 2px grey;
+      border-radius: 5px;
+      position: absolute;
+      bottom: 80px;
+      left: 270px;
+      padding-top: 9px;
+    }
+
+    .input1 {
+    border: 0;
+    outline: 0; /* ეს იმისთვისაა რომ ტექსტის აკრეფისას არ გამოჩნდეს ჩარჩოები მიუხედავად იმას რომ border: 0-ია */
+    border-bottom: 2px dotted grey;
+    margin-left: 170px;
+    width: 580px;
+    height: 40px;
+    position: absolute;
+    top: 108px;
+}
+    .input2 {
+    border: 0;
+    outline: 0; /* ეს იმისთვისაა რომ ტექსტის აკრეფისას არ გამოჩნდეს ჩარჩოები მიუხედავად იმას რომ border: 0-ია */
+    border-bottom: 2px dotted grey;
+    margin-left: 170px;
+    width: 580px;
+    height: 40px;
+    position: absolute;
+    top: 183px;
+}
+    .input3 {
+    border: 0;
+    outline: 0; /* ეს იმისთვისაა რომ ტექსტის აკრეფისას არ გამოჩნდეს ჩარჩოები მიუხედავად იმას რომ border: 0-ია */
+    border-bottom: 2px dotted grey;
+    margin-left: 170px;
+    width: 580px;
+    height: 40px;
+    position: absolute;
+    top: 253px;
+    }   
+    
+    .input4 {
+    border: 0;
+    outline: 0; /* ეს იმისთვისაა რომ ტექსტის აკრეფისას არ გამოჩნდეს ჩარჩოები მიუხედავად იმას რომ border: 0-ია */
+    border-bottom: 2px dotted grey;
+    margin-left: 170px;
+    width: 580px;
+    height: 40px;
+    position: absolute;
+    top: 350px;
+    }    
+  ::placeholder {
+    color: #d3e2ea;
+    font-size: 18px;
+  }
+  textarea {
+    border: 0;
+    outline: 0;
+    border-bottom: 2px dotted grey;
+    position: absolute;
+    bottom: 30px;
+    left: 170px;
+    width: 580px;
+    height: 125px;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <span style="font-size: 26px; color: grey; padding-left: 12px;">Basic inputs & Textarea</span>
+    <span style="font-size: 22px; font-weight: bold; color: grey; position: absolute; right: 12px;">< ></span>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <span style="font-size: 21px; font-weight: bold; padding-left: 80px; color: grey;">Name</span>
+    <form>
+      <input type="text" placeholder="Name" class="input1">
+      <input type="email" placeholder="Email" class="input2">
+      <input type="password" placeholder="Password" class="input3">
+      <input type="text" placeholder="Disabled Input" class="input4">
+
+      <br>
+      <br>
+      <br>
+      <span style="font-size: 21px; font-weight: bold; padding-left: 80px; color: grey;">Email</span>
+      <br>
+      <br>
+      <br>
+      <br>
+      <span style="font-size: 21px; font-weight: bold; padding-left: 50px; color: grey;">Password</span>
+      <br>
+      <br>
+      <br>
+      <br>
+      <span style="font-size: 21px; font-weight: bold; padding-left: 40px; color: grey;">Disabled</span>
+      <br>
+      <span style="font-size: 21px; font-weight: bold; padding-left: 68px; color: grey;">Input</span>
+      <br>
+      <br>
+      <br>
+      <br>      
+      <textarea cols="30" rows="10"></textarea>
+      <span style="font-size: 21px; font-weight: bold; padding-left: 38px; color: grey;">Textarea</span>
+
+    </form>
+
+  </div>
+</body>
+</html>
