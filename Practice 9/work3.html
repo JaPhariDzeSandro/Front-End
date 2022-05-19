@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="work3.css" />
+  </head>
+  <body>
+    <div class="maincalculator">
+      <div class="display">
+        <div id="result" class="result" style="color: rgb(255, 255, 0)">0</div>
+      </div>
+      <div class="input">
+        <button class="button7 buttons" id="7">7</button>
+        <button class="button8 buttons" id="8">8</button>
+        <button class="button9 buttons" id="9">9</button>
+        <button class="button4 buttons" id="4">4</button>
+        <button class="button5 buttons" id="5">5</button>
+        <button class="button6 buttons" id="6">6</button>
+        <button class="button1 buttons" id="1">1</button>
+        <button class="button2 buttons" id="2">2</button>
+        <button class="button3 buttons" id="3">3</button>
+        <button class="buttonpoint buttons" id=".">.</button>
+        <button class="button0 buttons" id="0">0</button>
+      <button class="buttondel"  id="del" style="color: rgb(7, 255, 7);">Del</button>
+        <button class="buttonP" name="digitP" id="P">P</button>
+        <button class="buttonT" name="digitT" id="T">T</button>
+        <button class="buttonR" name="digitR" id="R">R</button>
+      </div>
+    </div> 
+    
+    <div class="info">
+
+      <span style="position: relative; top:40px">P, T, R <br>works like input <br>GUIDE<br>click on P then write value then click again do same on each,make sure that u firstly do P,T,R.</span>
+    </div>
+    <script>
+      alert("მარტივი პროცენტის დარიცხვის კალკულატორი");
+      const screen = document.getElementById("result");
+      // const buttonS = document.getElementsByName("digit");
+
+
+      let digitPP = document.getElementById("P");
+      digitPP.addEventListener("click", fPP);
+      let digitTT = document.getElementById("T");
+      digitTT.addEventListener("click", fTT);
+      let digitRR = document.getElementById("R");
+      digitRR.addEventListener("click", fRR);
+
+      let delbutton = document.getElementById("del");
+     delbutton .addEventListener("click", del1)
+
+   
+      let countdel = 0;
+      let countR = 0;
+      let countP = 0;
+      let numberInP;
+      let typedNumb = "";
+      let countT = 0;
+      let numberInT;
+      let numberInR;
+      let result;
+
+      function fPP() {
+        countP++;
+        let digitDigit;
+        if (countP == 1) {
+          console.log("CLICK P again to save it");
+          digitDigit = document.getElementsByClassName("buttons");
+          console.log(digitDigit)
+
+          for (let i = 0; i < digitDigit.length; i++) {
+            digitDigit[i].addEventListener("click", f1);
+
+          }
+        } else {
+            numberInP = typedNumb; 
+            screen.innerText = 0;
+            typedNumb = "";            
+            console.log(numberInP)
+        }
+      }
+
+      function fTT(){
+
+        countT++;
+        let digitDigit;
+        if(countT == 1){
+          console.log("CLICK T again to save it");
+          digitDigit = document.getElementsByClassName("buttons");
+          console.log(digitDigit)
+
+          for (let i = 0; i < digitDigit.length; i++) {
+            digitDigit[i].addEventListener("click", f1);
+          }
+        } else {
+            numberInT = typedNumb;
+            console.log(numberInT)
+            screen.innerText = 0;
+            typedNumb = "";
+        }
+      }
+
+      function fRR(){
+        countR++;
+        let digitDigit;
+        console.log("u click r")
+        if(countR == 1){
+          console.log("CLICK R again to save it");
+          digitDigit = document.getElementsByClassName("buttons");
+          console.log(digitDigit)
+
+          for (let i = 0; i < digitDigit.length; i++) {
+            digitDigit[i].addEventListener("click", f1);
+
+          }
+        } else {
+            numberInR = typedNumb;
+            console.log(numberInR)
+            screen.innerText = 0;
+            typedNumb = "";
+            result = (numberInP*numberInT*numberInR)/100
+            screen.innerText = result;
+            console.log(result)
+          }
+        }
+
+
+
+
+        function del1(){
+       countdel++
+        if(countdel = 1){
+          screen.textContent = screen.textContent.substring(0,screen.textContent.length-1);
+          return;
+        }
+     }
+
+
+
+
+
+      function f1() {
+        typedNumb = typedNumb + this.id;
+        screen.innerText = typedNumb;
+        // console.log(dacheriliKnopkebi);
+      }
+
+
+
+
+    </script>
+  </body>
+</html>

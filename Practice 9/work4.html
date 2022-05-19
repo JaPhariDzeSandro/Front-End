@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="work4.css" />
+  </head>
+  <body>
+    <div class="maincalculator">
+      <div class="display">
+        <div id="result" class="result" style="color: rgb(255, 255, 0)">0</div>
+      </div>
+      <div class="input">
+        <button class="button7 buttons" id="7">7</button>
+        <button class="button8 buttons" id="8">8</button>
+        <button class="button9 buttons" id="9">9</button>
+        <button class="button4 buttons" id="4">4</button>
+        <button class="button5 buttons" id="5">5</button>
+        <button class="button6 buttons" id="6">6</button>
+        <button class="button1 buttons" id="1">1</button>
+        <button class="button2 buttons" id="2">2</button>
+        <button class="button3 buttons" id="3">3</button>
+        <button class="buttonpoint buttons" id=".">.</button>
+        <button class="button0 buttons" id="0">0</button>
+        <button class="buttondel" id="del" style="color: rgb(7, 255, 7)">
+          Del
+        </button>
+        <button class="buttonP" id="P">P</button>
+        <button class="buttonT" id="T">T</button>
+        <button class="buttonR" id="R">R</button>
+      </div>
+    </div>
+
+    <div class="info">
+      <span style="width: 100px; position: relative; top: 40px"
+        >P, T, R <br />works like input <br />GUIDE<br />click on P then write
+        value then click again do same on each,make sure that u firstly do
+        P,T,R.</span
+      >
+    </div>
+    <script>
+      alert("რთული პროცენტის დარიცხვის კალკულატორი")
+      const screen = document.getElementById("result");
+
+      let buttonP = document.getElementById("P");
+      buttonP.addEventListener("click", P1);
+      let buttonT = document.getElementById("T");
+      buttonT.addEventListener("click", T1);
+      let buttonR = document.getElementById("R");
+      buttonR.addEventListener("click", R1);
+
+      let delbutton = document.getElementById("del");
+      delbutton.addEventListener("click", del1);
+
+      let countdel = 0;
+      let typednumbers1 = "";
+      let typednumbers2 = "";
+      let typednumbers3 = "";
+      let typednumbP;
+      let countP = 0;
+      let countT = 0;
+      let typednumbT;
+      let countR = 0;
+      let typednumbR;
+      yy = 0;
+
+      function P1() {
+        countP++;
+        let ButtonS = document.getElementsByClassName("buttons");
+        if (countP == 1 && countR == 0 && countT == 0 ) {
+          for (var i = 0; i < ButtonS.length; i++) {
+            ButtonS[i].addEventListener("click", f1);
+          }
+        } else {
+          for (var i = 0; i < ButtonS.length; i++) {
+            ButtonS[i].removeEventListener("click", f1);
+          }
+          console.log(typednumbP);
+          alert("")
+          screen.innerText = 0;
+        }
+      }
+
+      function T1() {
+        countT++;
+        let ButtonS = document.getElementsByClassName("buttons");
+        if (countT == 1 && countR == 2) {
+          for (var i = 0; i < ButtonS.length; i++) {
+            ButtonS[i].addEventListener("click", f2);
+          }
+        } else {
+          for (var i = 0; i < ButtonS.length; i++) {
+            ButtonS[i].removeEventListener("click", f2);
+          }
+          console.log(typednumbT);
+          screen.innerText = 0;
+        }
+      }
+      function R1() {
+        countR++;
+        let ButtonS = document.getElementsByClassName("buttons");
+        if (countR == 1) {
+          for (var i = 0; i < ButtonS.length; i++) {
+            ButtonS[i].addEventListener("click", f3);
+          }
+        } else {
+          for (var i = 0; i < ButtonS.length; i++) {
+            ButtonS[i].removeEventListener("click", f3);
+          }
+          console.log(typednumbR);
+          screen.innerText = 0;
+
+          function f111() {
+            x = (Number(typednumbR) / 100) * (Number(typednumbP) + Number(yy));
+            yy += x;
+            x = 0;
+          }
+          for (var i = 0; i < 3; i++) {
+            f111();
+          }
+          screen.innerText = yy;
+        }
+      }
+
+      function del1() {
+        countdel++;
+        if ((countdel => 1)) {
+          screen.textContent = screen.textContent.substring(
+            0,
+            screen.textContent.length - 1
+          );
+          return;
+        }
+      }
+
+      function f1() {
+        typednumbers1 += this.id;
+        screen.innerText = typednumbers1;
+        typednumbP = typednumbers1;
+      }
+
+      function f2() {
+        typednumbers2 += this.id;
+        screen.innerText = typednumbers2;
+        typednumbT = typednumbers2;
+      }
+      function f3() {
+        typednumbers3 += this.id;
+        screen.innerText = typednumbers3;
+        typednumbR = typednumbers3;
+      }
+    </script>
+  </body>
+</html>

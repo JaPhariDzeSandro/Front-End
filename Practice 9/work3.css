@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(to right, purple, blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.maincalculator {
+  height: 540px;
+  border-radius: 25px;
+  border: 7px solid black;
+  background-color: rgb(119, 194, 8);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 22%;
+  overflow: hidden;
+  box-shadow: 7px 7px 7px rgb(0, 0, 0, 0.5);
+}
+
+.display {
+  height: 190px;
+  width: 97%;
+  background-color: black;
+  border: 4px solid #4100be;
+  color: white;
+  border-radius: 20px;
+  font-size: 25px;
+  padding-top: 55px;
+  margin-top: 5px;
+  box-shadow: 7px 7px 7px rgb(0, 0, 0, 0.5);
+}
+
+.input {
+  background-color: black;
+  border-radius: 20px;
+  border: 5px solid #4100be;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 9px
+}
+
+button {
+  border: none;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  padding: 1.1rem;
+  font-size: 22px;
+  transition: all 0.3s ease-in-out;
+  flex: display;
+  justify-content: center;
+  border-radius: 20px;
+  transition: 0s;
+}
+
+button:hover{
+  background-color: #140d0d;
+  border-radius: 20px;
+}
+
+.buttonDel
+{
+  color: rgb(0, 255, 0);
+}
+
+.buttonP 
+{
+  font-weight: bold;
+  color: red;
+}
+
+.buttonT
+{
+  font-weight: bold;
+  color: red;
+}
+
+.buttonR 
+{
+  font-weight: bold;
+  color: red;
+}
+
+.info
+{
+  position: absolute;
+  left: 1000px;
+  box-shadow: 7px 7px 7px rgb(0, 0, 0, 1.5);
+  background-color: rgb(4, 255, 4);
+  color: black;
+  height: 400px;
+  width: 200px;
+  border: 6px solid black;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  box-sizing: border-box;
+}
