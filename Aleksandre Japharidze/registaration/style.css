@@ -1,0 +1,128 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+  color:#fff;
+  display:flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, blue, red);
+  padding:10px;
+}
+.container{
+  max-width: 700px;
+  width: 100%;
+  padding: 25px 30px;
+  border-radius: 25px ;
+  background: linear-gradient(135deg, rgb(128, 0, 0),rgb(92, 2, 100));
+}
+.container .heading{
+  font-size: 25px;
+  font-weight: 500;
+  font-family:'Times New Roman', Times, serif;
+  position: relative;
+  text-align: center;
+  padding: 0 0 20px 0;
+}
+.container .heading::before{
+  content: '';
+  position: absolute;
+  height: 3px;
+  left:0;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(135deg, rgb(64, 64, 250) rgb(15, 14, 14));
+}
+.container form .card-details{
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+form .card-details .card-box{
+  width:calc(100% / 2 - 20px);
+  font-family:'Times New Roman', Times, serif;
+  margin-bottom:45px
+}
+.card-details .card-box .details{
+  font-family:'Times New Roman', Times, serif;
+  display:blox;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.card-details .card-box input{
+  font-family:'Times New Roman', Times, serif;
+  height: 45px;
+  width: 100%;
+  font-size: 16px;
+  outline: none;
+  padding-left: 15px;
+  border-radius: 5px;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+  border: 1px solid black;
+}
+.card-details .card-box select{
+  font-family:'Times New Roman', Times, serif;
+  height: 45px;
+  width: 100%;
+  font-size: 16px;
+  outline: none;
+  padding-left: 15px;
+  border-radius: 5px;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+  border: 1px solid black;
+}
+.card-details .card-box select option{
+  font-family:'Times New Roman', Times, serif;
+}
+.card-details .card-box input:focus,
+.card-details .card-box input:valid{
+  border-color:rgb(92, 2, 100);
+}
+form .button{
+  text-align: center;
+}
+form .button input{
+  font-family:'Times New Roman', Times, serif;
+  padding: 10px 0;
+  margin-top: 10px;
+  height: 100%;
+  width: 50%;
+  outline: none;
+  color: #fff;
+  border:none;
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, #05073a, red)
+}
+form .button input:hover{
+  background: linear-gradient(-135deg, #05073a, red);
+}
+
+@media(max-width: 584px){
+  .container{
+    max-width: 100%;
+  }
+  form .card-details .card-box{
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .circal-form .category{
+    width: 100%;
+  }
+  .container form .card-details{
+    max-height: 300px;
+    overflow: scroll;
+  }
+  .card-details::_webkit-scrollbar{
+    width: 0;
+  }
+}
